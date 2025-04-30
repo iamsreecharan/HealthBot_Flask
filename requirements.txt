@@ -10,3 +10,4 @@ transformers==4.34.1
 torch==2.0.1
 evaluate
 joblib
+gunicorn
