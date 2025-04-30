@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HealthBot</title>
+</head>
+<body>
+    <h2>HealthBot - Summarization & Specialty Predictor</h2>
+    <form method="POST" action="/chat">
+        <textarea name="user_input" rows="6" cols="60" placeholder="Enter patient transcription..." required></textarea><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+
+    {% if summary %}
+        <h3>📝 Summary:</h3>
+        <p>{{ summary }}</p>
+        <h3>🏥 Predicted Specialty:</h3>
+        <p><strong>{{ specialty }}</strong></p>
+    {% endif %}
+</body>
+</html>
